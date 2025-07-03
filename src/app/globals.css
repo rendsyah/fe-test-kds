@@ -1,0 +1,115 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ui-500: #5a5b63;
+  --color-ui-600: #43444b;
+  --color-ui-700: #27282e;
+  --color-ui-800: #232429;
+  --color-ui-900: #1b1c21;
+
+  --color-primary: #7688c9;
+  --color-secondary: #e6e7e9;
+}
+
+@layer base {
+  body {
+    @apply text-white/90 font-normal bg-ui-900;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  button:disabled {
+    @apply cursor-not-allowed;
+  }
+}
+
+@utility input {
+  @apply w-full appearance-none rounded-lg bg-ui-900 border border-secondary/[16%] py-2.75 px-4 text-sm text-white/90 placeholder:text-gray-400 focus:outline-hidden focus:border-primary;
+}
+
+@utility input-label {
+  @apply block text-white/90 text-sm font-semibold mb-1.5;
+}
+
+@utility input-error {
+  @apply border-red-700 focus:border-red-700;
+}
+
+@utility input-disabled {
+  @apply cursor-not-allowed;
+}
+
+@utility input-error-text {
+  @apply text-red-600 text-xs;
+}
+
+@utility widget-dark {
+  @apply rounded-2xl border border-secondary/[6%];
+}
+
+@utility no-scrollbar {
+  /* Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
+    @apply size-1.5;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply rounded-full;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full;
+  }
+}
+
+/* third-party libraries CSS */
+
+.apexcharts-legend-text {
+  @apply !text-gray-400;
+}
+
+.apexcharts-text {
+  @apply !fill-gray-400;
+}
+
+.apexcharts-tooltip.apexcharts-theme-light {
+  @apply gap-1 !rounded-lg !border-white/10 p-3 backdrop-blur-xs !bg-ui-900/80;
+}
+
+.apexcharts-legend-text {
+  @apply pl-5! !text-gray-400;
+}
+
+.apexcharts-tooltip-series-group {
+  @apply !p-0;
+}
+
+.apexcharts-tooltip-y-group {
+  @apply !p-0;
+}
+
+.apexcharts-tooltip-title {
+  @apply !mb-0 !border-b-0 !bg-transparent !p-0 !text-[10px] !leading-4 !text-white/90;
+}
+
+.apexcharts-tooltip-text {
+  @apply !text-xs !text-white/90;
+}
+
+.apexcharts-tooltip-text-y-value {
+  @apply !font-medium;
+}
+
+.apexcharts-gridline {
+  @apply !stroke-white/10;
+}

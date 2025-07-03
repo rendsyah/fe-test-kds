@@ -1,0 +1,20 @@
+services:
+  cms-app:
+    container_name: cms-app
+    image: cms-app:1.0.0
+    build:
+      context: .
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      TZ: Asia/Jakarta
+    restart: always
+    networks:
+      - shared-networks
+
+networks:
+  shared-networks:
+    name: shared-networks
+    external: true

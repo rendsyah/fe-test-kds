@@ -1,0 +1,52 @@
+{
+  "name": "cms-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.4",
+    "@hookform/resolvers": "^5.0.1",
+    "@tanstack/react-query": "^5.81.2",
+    "apexcharts": "^4.7.0",
+    "clsx": "^2.1.1",
+    "lodash.debounce": "^4.0.8",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-apexcharts": "^1.7.0",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.3",
+    "sonner": "^2.0.3",
+    "tailwind-merge": "^3.2.0",
+    "ua-parser-js": "^2.0.3",
+    "uuid": "^11.1.0",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.9.0"
+  }
+}
